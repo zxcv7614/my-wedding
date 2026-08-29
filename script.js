@@ -1,104 +1,70 @@
-/* ========================================
-   PHOTO GALLERY
-======================================== */
+document.addEventListener("DOMContentLoaded", function () {
+
+    const galleryItems = document.querySelectorAll(".gallery-item");
+    const modal = document.getElementById("photoModal");
+    const modalImage = document.getElementById("modalImage");
+    const closeButton = document.querySelector(".close-button");
+
+    galleryItems.forEach(function (item) {
+
+        item.addEventListener("click", function () {
+
+            const image = item.querySelector("img");
+
+            if (!image || !modal || !modalImage) {
+                return;
+            }
+
+            modalImage.src = image.src;
+            modal.classList.add("active");
+
+            document.body.style.overflow = "hidden";
+        });
+    });
 
 
-function openPhoto(src) {
+    function closeModal() {
 
-    const modal =
-        document.getElementById("photoModal");
+        if (!modal) {
+            return;
+        }
 
-    const image =
-        document.getElementById("modalImage");
+        modal.classList.remove("active");
+        modalImage.src = "";
 
-
-    if (!modal || !image) {
-        return;
+        document.body.style.overflow = "";
     }
 
 
-    image.src = src;
+    if (closeButton) {
 
-    modal.classList.add("active");
+        closeButton.addEventListener("click", function (event) {
 
-    /*
-     * 확대 사진이 열려 있을 때
-     * 뒤쪽 페이지가 스크롤되지 않도록 합니다.
-     */
-    document.body.style.overflow = "hidden";
-}
+            event.stopPropagation();
 
-
-function closePhoto() {
-
-    const modal =
-        document.getElementById("photoModal");
-
-
-    if (!modal) {
-        return;
+            closeModal();
+        });
     }
 
 
-    modal.classList.remove("active");
+    if (modal) {
 
-    document.body.style.overflow = "";
-}
+        modal.addEventListener("click", function (event) {
 
+            if (event.target === modal) {
 
-/*
- * ESC 키를 누르면 사진 닫기
- */
-document.addEventListener("keydown", function(event) {
-
-    if (event.key === "Escape") {
-
-        closePhoto();
-
+                closeModal();
+            }
+        });
     }
+
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+
+            closeModal();
+        }
+    });
 
 });
-
-
-/* ========================================
-   ACCOUNT
-======================================== */
-
-
-function copyAccount() {
-
-    const account =
-        "0000 0000 0000";
-
-
-    if (
-        navigator.clipboard &&
-        window.isSecureContext
-    ) {
-
-        navigator.clipboard
-            .writeText(account)
-            .then(function() {
-
-                alert(
-                    "계좌번호가 복사되었습니다."
-                );
-
-            })
-            .catch(function() {
-
-                alert(
-                    "계좌번호: " + account
-                );
-
-            });
-
-    } else {
-
-        alert(
-            "계좌번호: " + account
-        );
-
-    }
-
-}
