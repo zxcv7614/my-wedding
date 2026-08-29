@@ -1,119 +1,175 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
-    const galleryItems =
-        document.querySelectorAll(".gallery-item");
+        const galleryItems =
+            document.querySelectorAll(
+                ".gallery-item"
+            );
 
-    const modal =
-        document.getElementById("photoModal");
+        const modal =
+            document.getElementById(
+                "photoModal"
+            );
 
-    const modalImage =
-        document.getElementById("modalImage");
+        const modalImage =
+            document.getElementById(
+                "modalImage"
+            );
 
-    const closeButton =
-        document.querySelector(".close-button");
-
-
-    /*
-     * GALLERY PHOTO OPEN
-     */
-
-    galleryItems.forEach(function (item) {
-
-        item.addEventListener("click", function () {
-
-            const photo =
-                item.querySelector("img");
+        const closeButton =
+            document.querySelector(
+                ".close-button"
+            );
 
 
-            if (!photo || !modal || !modalImage) {
+        /*
+         * OPEN PHOTO
+         */
+
+        galleryItems.forEach(
+            function (item) {
+
+                item.addEventListener(
+                    "click",
+                    function () {
+
+                        const photo =
+                            item.querySelector(
+                                "img"
+                            );
+
+
+                        if (
+                            !photo ||
+                            !modal ||
+                            !modalImage
+                        ) {
+                            return;
+                        }
+
+
+                        modalImage.src =
+                            photo.src;
+
+
+                        modal.classList.add(
+                            "active"
+                        );
+
+
+                        modal.setAttribute(
+                            "aria-hidden",
+                            "false"
+                        );
+
+
+                        document.body.style.overflow =
+                            "hidden";
+
+                    }
+                );
+
+            }
+        );
+
+
+
+        /*
+         * CLOSE PHOTO
+         */
+
+        function closePhoto() {
+
+            if (!modal) {
                 return;
             }
 
 
-            modalImage.src =
-                photo.getAttribute("src");
-
-
-            modal.classList.add("active");
-
-            modal.setAttribute(
-                "aria-hidden",
-                "false"
+            modal.classList.remove(
+                "active"
             );
 
 
-            document.body.style.overflow =
-                "hidden";
-
-        });
-
-    });
+            modal.setAttribute(
+                "aria-hidden",
+                "true"
+            );
 
 
-
-    /*
-     * CLOSE MODAL
-     */
-
-    function closePhoto() {
-
-        if (!modal) {
-            return;
-        }
-
-
-        modal.classList.remove("active");
-
-        modal.setAttribute(
-            "aria-hidden",
-            "true"
-        );
-
-
-        if (modalImage) {
-            modalImage.src = "";
-        }
-
-
-        document.body.style.overflow =
-            "";
-
-    }
-
-
-
-    /*
-     * X BUTTON
-     */
-
-    if (closeButton) {
-
-        closeButton.addEventListener(
-            "click",
-            function (event) {
-
-                event.stopPropagation();
-
-                closePhoto();
-
+            if (modalImage) {
+                modalImage.src = "";
             }
-        );
-
-    }
 
 
+            document.body.style.overflow =
+                "";
 
-    /*
-     * CLICK OUTSIDE PHOTO
-     */
+        }
 
-    if (modal) {
 
-        modal.addEventListener(
-            "click",
+
+        /*
+         * X BUTTON
+         */
+
+        if (closeButton) {
+
+            closeButton.addEventListener(
+                "click",
+                function (event) {
+
+                    event.stopPropagation();
+
+                    closePhoto();
+
+                }
+            );
+
+        }
+
+
+
+        /*
+         * CLICK BACKGROUND
+         */
+
+        if (modal) {
+
+            modal.addEventListener(
+                "click",
+                function (event) {
+
+                    if (
+                        event.target === modal
+                    ) {
+
+                        closePhoto();
+
+                    }
+
+                }
+            );
+
+        }
+
+
+
+        /*
+         * ESC KEY
+         */
+
+        document.addEventListener(
+            "keydown",
             function (event) {
 
-                if (event.target === modal) {
+                if (
+                    event.key === "Escape" &&
+                    modal &&
+                    modal.classList.contains(
+                        "active"
+                    )
+                ) {
 
                     closePhoto();
 
@@ -123,28 +179,4 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
     }
-
-
-
-    /*
-     * ESC KEY
-     */
-
-    document.addEventListener(
-        "keydown",
-        function (event) {
-
-            if (
-                event.key === "Escape" &&
-                modal &&
-                modal.classList.contains("active")
-            ) {
-
-                closePhoto();
-
-            }
-
-        }
-    );
-
-});
+);

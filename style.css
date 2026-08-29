@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Nanum+Myeongjo:wght@400;700&display=swap');
 
 
 /* =========================
@@ -18,9 +18,9 @@ html {
 body {
     margin: 0;
 
-    background: #edf4f7;
+    background: #f1f1f1;
 
-    color: #343b3e;
+    color: #383838;
 
     font-family:
         "Nanum Myeongjo",
@@ -51,88 +51,119 @@ button {
 ========================= */
 
 .hero {
+    position: relative;
+
     background: #ffffff;
 
     text-align: center;
 }
 
 
-.hero-content {
-    padding: 60px 25px 48px;
+/*
+ * 상단 흰 공간
+ */
+
+.hero-top {
+    position: relative;
+
+    height: 310px;
+
+    background: #ffffff;
 }
 
 
-.eyebrow {
+/*
+ * SAVE THE DATE 세로 박스
+ */
+
+.save-date-card {
+    position: absolute;
+
+    left: 50%;
+    bottom: -60px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    width: 142px;
+
+    padding: 30px 20px 28px;
+
+    border: 1.5px solid #c6d7da;
+
+    background:
+        rgba(255, 255, 255, 0.84);
+
+    backdrop-filter: blur(2px);
+}
+
+
+.save-title {
     margin: 0;
 
     font-family:
-        Arial,
-        sans-serif;
-
-    font-size: 13px;
-    font-weight: 500;
-
-    letter-spacing: 4px;
-
-    color: #5088ad;
-}
-
-
-.hero h1 {
-    margin: 23px 0 14px;
-
-    font-size: 37px;
-    font-weight: 400;
-
-    line-height: 1.4;
-
-    color: #32393c;
-}
-
-
-.hero h1 span {
-    display: inline-block;
-
-    margin: 0 7px;
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
     font-size: 22px;
+    font-weight: 400;
 
-    color: #6298bb;
+    line-height: 1.05;
+
+    letter-spacing: 7px;
+
+    color: #353535;
 }
 
 
-.hero-line {
-    width: 34px;
-    height: 1px;
+.save-title span {
+    display: block;
 
-    margin: 20px auto;
+    margin: 8px 0;
 
-    background: #8eb8d0;
+    font-size: 17px;
+
+    letter-spacing: 3px;
 }
 
 
-.date {
+.save-line {
+    width: 1px;
+    height: 45px;
+
+    margin: 22px auto;
+
+    background: #aebfc2;
+}
+
+
+.save-names {
     margin: 0;
 
-    font-family:
-        Arial,
-        sans-serif;
+    font-size: 18px;
 
-    font-size: 14px;
+    line-height: 1.7;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 3px;
 
-    color: #687b86;
+    color: #3f3f3f;
 }
 
+
+
+/*
+ * MAIN PHOTO
+ */
 
 .hero-photo {
     width: 100%;
-    height: 590px;
+    height: 390px;
 
     overflow: hidden;
 
-    background: #eaf3f7;
+    background: #dddddd;
 }
 
 
@@ -143,16 +174,67 @@ button {
     display: block;
 
     object-fit: cover;
+
+    object-position: center;
+
+    /*
+     * 레퍼런스처럼 흑백 사진
+     */
+    filter: grayscale(100%);
+}
+
+
+
+/*
+ * 사진 밑 날짜 / 시간
+ */
+
+.hero-date {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    min-height: 95px;
+
+    padding: 22px 20px;
+
+    background: #ffffff;
+}
+
+
+.hero-date p {
+    margin: 0;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1.3px;
+
+    color: #707070;
+}
+
+
+.hero-date span {
+    width: 1px;
+    height: 12px;
+
+    background: #c7d3d5;
 }
 
 
 
 /* =========================
-   COMMON
+   COMMON SECTION
 ========================= */
 
 .section {
-    padding: 95px 30px;
+    padding: 95px 32px;
 
     text-align: center;
 }
@@ -162,37 +244,38 @@ button {
     margin: 0;
 
     font-family:
-        Arial,
-        sans-serif;
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
 
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 
-    color: #5792b8;
+    color: #7d989d;
 }
 
 
-.small-line {
-    width: 24px;
+.section-line {
+    width: 25px;
     height: 1px;
 
-    margin: 14px auto 0;
+    margin: 15px auto 0;
 
-    background: #99bed4;
+    background: #bdcccf;
 }
 
 
 .section h2 {
-    margin: 27px 0 37px;
+    margin: 28px 0 38px;
 
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 26px;
+    font-weight: 400;
 
-    line-height: 1.55;
+    line-height: 1.6;
 
-    color: #3c4850;
+    color: #424242;
 }
 
 
@@ -202,30 +285,18 @@ button {
 ========================= */
 
 .invitation-section {
-    background:
-        linear-gradient(
-            180deg,
-            #f7fbfd 0%,
-            #ffffff 100%
-        );
+    background: #fafafa;
 }
 
 
 .message {
     margin: 0;
 
-    font-size: 16px;
+    font-size: 15px;
 
-    line-height: 2.2;
+    line-height: 2.25;
 
-    color: #59676f;
-}
-
-
-.message-highlight {
-    font-weight: 700;
-
-    color: #477fa4;
+    color: #606060;
 }
 
 
@@ -238,7 +309,7 @@ button {
 
     font-size: 21px;
 
-    color: #68a0c3;
+    color: #afc8cc;
 }
 
 
@@ -258,9 +329,7 @@ button {
     grid-template-columns:
         repeat(2, 1fr);
 
-    gap: 8px;
-
-    margin-top: 5px;
+    gap: 6px;
 }
 
 
@@ -271,15 +340,13 @@ button {
 
     border: 0;
 
-    background: #eef5f8;
+    background: #eeeeee;
 
     aspect-ratio: 1 / 1;
 
     overflow: hidden;
 
     cursor: pointer;
-
-    border-radius: 3px;
 
     -webkit-tap-highlight-color: transparent;
 }
@@ -296,21 +363,12 @@ button {
     pointer-events: none;
 
     transition:
-        transform 0.35s ease;
+        transform 0.3s ease;
 }
 
 
 .gallery-item:hover img {
-    transform: scale(1.035);
-}
-
-
-.gallery-guide {
-    margin: 18px 0 0;
-
-    font-size: 12px;
-
-    color: #8a989f;
+    transform: scale(1.03);
 }
 
 
@@ -320,83 +378,45 @@ button {
 ========================= */
 
 .wedding-section {
-    background: #f3f9fc;
+    background: #fafafa;
 }
 
 
-.wedding-info {
-    margin-top: 8px;
-
-    text-align: left;
-}
-
-
-.info-row {
-    display: grid;
-
-    grid-template-columns: 42px 1fr;
-
-    gap: 15px;
-
-    padding: 17px 0;
-
-    border-bottom: 1px solid #dceaf1;
-}
-
-
-.info-row:last-child {
-    border-bottom: 0;
-}
-
-
-.info-symbol {
-    width: 34px;
-    height: 34px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid #8db9d1;
-
-    border-radius: 50%;
-
-    font-family:
-        Arial,
-        sans-serif;
-
-    font-size: 10px;
-
-    color: #508caf;
-}
-
-
-.info-title {
-    display: block;
-
-    margin-bottom: 5px;
-
-    font-family:
-        Arial,
-        sans-serif;
-
-    font-size: 10px;
-
-    letter-spacing: 2px;
-
-    color: #6e9bb5;
-}
-
-
-.info-row p {
-    margin: 0;
+.wedding-details {
+    color: #626262;
 
     font-size: 15px;
 
-    line-height: 1.8;
+    line-height: 2;
+}
 
-    color: #4f5e66;
+
+.wedding-details p {
+    margin: 7px 0;
+}
+
+
+.detail-divider {
+    width: 1px;
+    height: 32px;
+
+    margin: 25px auto;
+
+    background: #bdcccf;
+}
+
+
+.venue-name {
+    font-size: 17px;
+
+    color: #454545;
+}
+
+
+.venue-address {
+    font-size: 14px;
+
+    color: #777777;
 }
 
 
@@ -413,37 +433,39 @@ button {
 .location-address {
     margin: -12px 0 30px;
 
-    font-size: 15px;
+    font-size: 14px;
 
-    line-height: 1.9;
+    line-height: 2;
 
-    color: #68767d;
+    color: #777777;
 }
 
 
 .map-button {
     display: inline-block;
 
-    padding: 14px 25px;
+    padding: 13px 24px;
 
-    border-radius: 30px;
+    border: 1px solid #b9cacd;
 
-    background: #5f98bd;
+    background: transparent;
 
-    color: #ffffff;
+    color: #637c80;
 
     text-decoration: none;
 
-    font-family:
-        Arial,
-        sans-serif;
-
     font-size: 13px;
 
-    letter-spacing: 0.3px;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
 
-    box-shadow:
-        0 5px 16px rgba(78, 137, 174, 0.16);
+
+.map-button:hover {
+    background: #edf3f4;
+
+    color: #44595d;
 }
 
 
@@ -453,7 +475,7 @@ button {
 ========================= */
 
 .contact-section {
-    background: #f6fafc;
+    background: #fafafa;
 }
 
 
@@ -461,26 +483,32 @@ button {
     display: grid;
 
     grid-template-columns:
-        repeat(2, 1fr);
+        1fr 1px 1fr;
 
-    gap: 12px;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.contact-divider {
+    width: 1px;
+    height: 80px;
+
+    background: #d8e0e1;
 }
 
 
 .contact-card {
-    padding: 27px 10px;
+    display: flex;
 
-    background: #ffffff;
+    flex-direction: column;
 
-    border: 1px solid #dfebf1;
-
-    border-radius: 4px;
+    align-items: center;
 }
 
 
 .contact-role {
-    display: block;
-
     margin-bottom: 10px;
 
     font-family:
@@ -491,31 +519,29 @@ button {
 
     letter-spacing: 2px;
 
-    color: #6597b6;
+    color: #7d989d;
 }
 
 
 .contact-card strong {
-    display: block;
-
     margin-bottom: 15px;
 
     font-size: 17px;
 
-    font-weight: 700;
+    font-weight: 400;
 }
 
 
 .contact-card a {
-    color: #587a90;
-
-    text-decoration: none;
-
     font-family:
         Arial,
         sans-serif;
 
-    font-size: 12px;
+    font-size: 11px;
+
+    color: #707b7d;
+
+    text-decoration: none;
 }
 
 
@@ -529,45 +555,41 @@ button {
 }
 
 
-.account-card {
+.account-box {
     margin-bottom: 12px;
 
     padding: 22px 20px;
 
-    background: #f5f9fb;
+    border: 1px solid #e4e7e7;
 
-    border: 1px solid #e0ebf0;
-
-    border-radius: 4px;
+    background: #fafafa;
 
     text-align: left;
 }
 
 
-.account-card:last-child {
+.account-box:last-child {
     margin-bottom: 0;
 }
 
 
-.account-side {
-    margin: 0 0 10px;
+.account-title {
+    margin: 0 0 11px;
 
     font-size: 15px;
 
-    font-weight: 700;
-
-    color: #4f7890;
+    color: #5c7377;
 }
 
 
 .account-info {
     margin: 0;
 
-    font-size: 14px;
+    font-size: 13px;
 
     line-height: 2;
 
-    color: #5e6b72;
+    color: #666666;
 
     word-break: break-word;
 }
@@ -581,53 +603,62 @@ button {
 .closing {
     padding: 100px 30px;
 
+    background: #fafafa;
+
     text-align: center;
-
-    background:
-        linear-gradient(
-            180deg,
-            #f2f8fb 0%,
-            #eaf4f8 100%
-        );
-
-    color: #596a73;
 }
 
 
-.closing-small {
+.closing-label {
     margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    color: #829da2;
+}
+
+
+.closing-message {
+    margin: 30px 0 0;
+
+    font-size: 15px;
+
+    line-height: 2.1;
+
+    color: #646464;
+}
+
+
+.closing-heart {
+    margin-top: 25px;
 
     font-family:
         Arial,
         sans-serif;
 
-    font-size: 11px;
+    font-size: 20px;
 
-    letter-spacing: 3px;
-
-    color: #6598b8;
-}
-
-
-.closing > p:not(.closing-small) {
-    margin: 30px 0 0;
-
-    font-size: 15px;
-
-    line-height: 2;
+    color: #aac4c8;
 }
 
 
 .closing strong {
     display: block;
 
-    margin-top: 27px;
+    margin-top: 22px;
 
-    font-size: 18px;
+    font-size: 17px;
 
-    font-weight: 700;
+    font-weight: 400;
 
-    color: #45565f;
+    color: #484848;
 }
 
 
@@ -651,7 +682,7 @@ button {
     padding: 20px;
 
     background:
-        rgba(14, 24, 30, 0.94);
+        rgba(15, 15, 15, 0.94);
 }
 
 
@@ -661,17 +692,15 @@ button {
 
 
 .photo-modal img {
-    max-width: 94vw;
-    max-height: 88vh;
+    display: block;
 
     width: auto;
     height: auto;
 
-    display: block;
+    max-width: 95vw;
+    max-height: 88vh;
 
     object-fit: contain;
-
-    border-radius: 2px;
 }
 
 
@@ -680,6 +709,8 @@ button {
 
     top: 14px;
     right: 17px;
+
+    z-index: 1000000;
 
     width: 48px;
     height: 48px;
@@ -696,12 +727,10 @@ button {
         Arial,
         sans-serif;
 
-    font-size: 39px;
+    font-size: 38px;
     font-weight: 200;
 
     cursor: pointer;
-
-    z-index: 1000000;
 }
 
 
@@ -712,12 +741,26 @@ button {
 
 @media (max-width: 480px) {
 
-    .hero-photo {
-        height: 570px;
+    .hero-top {
+        height: 285px;
     }
 
-    .hero h1 {
-        font-size: 35px;
+
+    .hero-photo {
+        height: 350px;
+    }
+
+
+    .save-date-card {
+        width: 130px;
+
+        padding:
+            27px 17px 25px;
+    }
+
+
+    .save-title {
+        font-size: 20px;
     }
 
 }
@@ -734,10 +777,11 @@ button {
         padding: 30px 0;
     }
 
+
     .invitation {
         box-shadow:
-            0 10px 40px
-            rgba(40, 70, 85, 0.08);
+            0 8px 35px
+            rgba(0, 0, 0, 0.06);
     }
 
 }
