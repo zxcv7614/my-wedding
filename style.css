@@ -1,368 +1,743 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
+
+/* =========================
+   BASE
+========================= */
+
 * {
     box-sizing: border-box;
 }
+
 
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     margin: 0;
-    background: #eef1eb;
-    color: #30342f;
-    font-family: "Nanum Myeongjo", serif;
+
+    background: #edf4f7;
+
+    color: #343b3e;
+
+    font-family:
+        "Nanum Myeongjo",
+        serif;
 }
+
 
 button {
     font: inherit;
 }
 
+
 .invitation {
     width: 100%;
     max-width: 480px;
+
     margin: 0 auto;
+
     background: #ffffff;
+
+    overflow: hidden;
 }
 
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
-    text-align: center;
     background: #ffffff;
+
+    text-align: center;
 }
+
+
+.hero-content {
+    padding: 60px 25px 48px;
+}
+
+
+.eyebrow {
+    margin: 0;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    color: #5088ad;
+}
+
+
+.hero h1 {
+    margin: 23px 0 14px;
+
+    font-size: 37px;
+    font-weight: 400;
+
+    line-height: 1.4;
+
+    color: #32393c;
+}
+
+
+.hero h1 span {
+    display: inline-block;
+
+    margin: 0 7px;
+
+    font-size: 22px;
+
+    color: #6298bb;
+}
+
+
+.hero-line {
+    width: 34px;
+    height: 1px;
+
+    margin: 20px auto;
+
+    background: #8eb8d0;
+}
+
+
+.date {
+    margin: 0;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+
+    letter-spacing: 1.5px;
+
+    color: #687b86;
+}
+
 
 .hero-photo {
     width: 100%;
-    height: 620px;
+    height: 590px;
+
     overflow: hidden;
-    background: #e9eee7;
+
+    background: #eaf3f7;
 }
+
 
 .hero-photo img {
     width: 100%;
     height: 100%;
+
     display: block;
+
     object-fit: cover;
 }
 
-.hero-content {
-    padding: 55px 25px 75px;
-}
-
-.eyebrow {
-    margin: 0;
-    font-size: 13px;
-    letter-spacing: 3px;
-    color: #7f897c;
-    line-height: 1.6;
-}
-
-.hero h1 {
-    margin: 22px 0;
-    font-family: "Nanum Myeongjo", serif;
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 1.45;
-}
-
-.hero h1 span {
-    display: block;
-    margin: 4px 0;
-    font-size: 20px;
-    color: #979f95;
-}
-
-.date {
-    margin: 0;
-    font-size: 14px;
-    letter-spacing: 1px;
-    color: #686f67;
-    line-height: 1.7;
-}
 
 
-/* COMMON SECTION */
+/* =========================
+   COMMON
+========================= */
 
 .section {
-    padding: 90px 30px;
+    padding: 95px 30px;
+
     text-align: center;
 }
 
+
 .section-label {
     margin: 0;
+
+    font-family:
+        Arial,
+        sans-serif;
+
     font-size: 12px;
+    font-weight: 600;
+
     letter-spacing: 3px;
-    color: #7f897c;
-    line-height: 1.6;
+
+    color: #5792b8;
 }
+
+
+.small-line {
+    width: 24px;
+    height: 1px;
+
+    margin: 14px auto 0;
+
+    background: #99bed4;
+}
+
 
 .section h2 {
-    margin: 20px 0 35px;
-    font-family: "Nanum Myeongjo", serif;
-    font-size: 29px;
+    margin: 27px 0 37px;
+
+    font-size: 28px;
     font-weight: 700;
-    line-height: 1.5;
+
+    line-height: 1.55;
+
+    color: #3c4850;
 }
 
 
-/* INVITATION */
+
+/* =========================
+   INVITATION
+========================= */
 
 .invitation-section {
-    background: #f5f7f3;
+    background:
+        linear-gradient(
+            180deg,
+            #f7fbfd 0%,
+            #ffffff 100%
+        );
 }
+
 
 .message {
     margin: 0;
 
-    font-family: "Nanum Myeongjo", serif;
     font-size: 16px;
-    font-weight: 400;
 
-    line-height: 2.15;
+    line-height: 2.2;
 
-    color: #5d645c;
-
-    letter-spacing: -0.2px;
+    color: #59676f;
 }
+
 
 .message-highlight {
-    color: #485348;
     font-weight: 700;
+
+    color: #477fa4;
 }
 
-.invitation-heart {
+
+.heart {
     margin-top: 38px;
 
-    font-size: 17px;
-    color: #9aa696;
+    font-family:
+        Arial,
+        sans-serif;
 
-    line-height: 1;
+    font-size: 21px;
+
+    color: #68a0c3;
 }
 
 
-/* GALLERY */
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    background: #ffffff;
+}
+
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 7px;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 8px;
+
+    margin-top: 5px;
 }
+
 
 .gallery-item {
     width: 100%;
+
     padding: 0;
+
     border: 0;
+
+    background: #eef5f8;
+
     aspect-ratio: 1 / 1;
+
     overflow: hidden;
-    background: #edf1eb;
+
     cursor: pointer;
+
+    border-radius: 3px;
+
     -webkit-tap-highlight-color: transparent;
 }
+
 
 .gallery-item img {
     width: 100%;
     height: 100%;
+
     display: block;
+
     object-fit: cover;
-    transition: transform 0.3s ease;
+
     pointer-events: none;
+
+    transition:
+        transform 0.35s ease;
 }
+
 
 .gallery-item:hover img {
-    transform: scale(1.03);
+    transform: scale(1.035);
 }
 
 
-/* WEDDING DAY */
+.gallery-guide {
+    margin: 18px 0 0;
+
+    font-size: 12px;
+
+    color: #8a989f;
+}
+
+
+
+/* =========================
+   WEDDING DAY
+========================= */
 
 .wedding-section {
-    background: #f5f7f3;
-}
-
-.wedding-details {
-    font-size: 16px;
-    line-height: 2;
-    color: #565d55;
-}
-
-.wedding-details p {
-    margin: 8px 0;
+    background: #f3f9fc;
 }
 
 
-/* GOOGLE MAPS */
+.wedding-info {
+    margin-top: 8px;
 
-.map-section {
-    padding: 0 30px 90px;
-    background: #f5f7f3;
+    text-align: left;
 }
 
-.map-placeholder {
-    height: 260px;
+
+.info-row {
+    display: grid;
+
+    grid-template-columns: 42px 1fr;
+
+    gap: 15px;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid #dceaf1;
+}
+
+
+.info-row:last-child {
+    border-bottom: 0;
+}
+
+
+.info-symbol {
+    width: 34px;
+    height: 34px;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
-    background: #e6ebe3;
-    color: #7f897c;
-    font-size: 12px;
-    letter-spacing: 3px;
+
+    border: 1px solid #8db9d1;
+
+    border-radius: 50%;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+
+    color: #508caf;
 }
+
+
+.info-title {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #6e9bb5;
+}
+
+
+.info-row p {
+    margin: 0;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: #4f5e66;
+}
+
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.location-section {
+    background: #ffffff;
+}
+
+
+.location-address {
+    margin: -12px 0 30px;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    color: #68767d;
+}
+
 
 .map-button {
-    display: block;
-    margin-top: 10px;
-    padding: 16px;
-    background: #ffffff;
-    color: #4f564e;
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    background: #5f98bd;
+
+    color: #ffffff;
+
     text-decoration: none;
-    text-align: center;
-    font-size: 14px;
-    border: 1px solid #e3e6e1;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 0.3px;
+
+    box-shadow:
+        0 5px 16px rgba(78, 137, 174, 0.16);
 }
 
 
-/* CONTACT */
 
-.contact-list {
-    border-top: 1px solid #e8ebe6;
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    background: #f6fafc;
 }
 
-.contact-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 0;
-    border-bottom: 1px solid #e8ebe6;
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
 }
 
-.contact-row > div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
+
+.contact-card {
+    padding: 27px 10px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfebf1;
+
+    border-radius: 4px;
 }
+
 
 .contact-role {
-    font-family: Arial, sans-serif;
-    font-size: 11px;
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+
     letter-spacing: 2px;
-    color: #7f897c;
+
+    color: #6597b6;
 }
 
-.contact-row strong {
-    font-size: 16px;
-    font-weight: 400;
+
+.contact-card strong {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-size: 17px;
+
+    font-weight: 700;
 }
 
-.contact-row a {
-    padding: 10px 15px;
-    background: #eef2eb;
-    color: #4f564e;
+
+.contact-card a {
+    color: #587a90;
+
     text-decoration: none;
-    font-size: 13px;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
 }
 
 
-/* ACCOUNT */
+
+/* =========================
+   ACCOUNT
+========================= */
 
 .account-section {
-    background: #f5f7f3;
+    background: #ffffff;
 }
 
-.account-title {
-    font-size: 16px;
-    font-weight: 700;
-    color: #50574f;
-    margin-bottom: 10px;
+
+.account-card {
+    margin-bottom: 12px;
+
+    padding: 22px 20px;
+
+    background: #f5f9fb;
+
+    border: 1px solid #e0ebf0;
+
+    border-radius: 4px;
+
+    text-align: left;
 }
+
+
+.account-card:last-child {
+    margin-bottom: 0;
+}
+
+
+.account-side {
+    margin: 0 0 10px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    color: #4f7890;
+}
+
 
 .account-info {
-    margin-bottom: 28px;
-    font-size: 15px;
+    margin: 0;
+
+    font-size: 14px;
+
     line-height: 2;
-    color: #5b625a;
+
+    color: #5e6b72;
+
+    word-break: break-word;
 }
 
 
-/* CLOSING */
+
+/* =========================
+   CLOSING
+========================= */
 
 .closing {
     padding: 100px 30px;
+
     text-align: center;
-    background: #e9eee7;
-    color: #596158;
-    line-height: 2;
-    font-size: 15px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f2f8fb 0%,
+            #eaf4f8 100%
+        );
+
+    color: #596a73;
 }
+
+
+.closing-small {
+    margin: 0;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #6598b8;
+}
+
+
+.closing > p:not(.closing-small) {
+    margin: 30px 0 0;
+
+    font-size: 15px;
+
+    line-height: 2;
+}
+
 
 .closing strong {
     display: block;
-    margin-top: 25px;
-    font-family: "Nanum Myeongjo", serif;
+
+    margin-top: 27px;
+
+    font-size: 18px;
+
     font-weight: 700;
-    font-size: 17px;
+
+    color: #45565f;
 }
 
 
-/* PHOTO MODAL */
+
+/* =========================
+   PHOTO MODAL
+========================= */
 
 .photo-modal {
     position: fixed;
+
     inset: 0;
-    z-index: 99999;
+
+    z-index: 999999;
+
     display: none;
+
     align-items: center;
     justify-content: center;
+
     padding: 20px;
-    background: rgba(20, 24, 20, 0.94);
+
+    background:
+        rgba(14, 24, 30, 0.94);
 }
+
 
 .photo-modal.active {
     display: flex;
 }
 
+
 .photo-modal img {
     max-width: 94vw;
     max-height: 88vh;
+
+    width: auto;
+    height: auto;
+
     display: block;
+
     object-fit: contain;
+
+    border-radius: 2px;
 }
+
 
 .close-button {
     position: absolute;
+
     top: 14px;
-    right: 18px;
-    width: 46px;
-    height: 46px;
+    right: 17px;
+
+    width: 48px;
+    height: 48px;
+
     padding: 0;
+
     border: 0;
+
     background: transparent;
+
     color: #ffffff;
-    font-family: Arial, sans-serif;
-    font-size: 38px;
-    line-height: 46px;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 39px;
+    font-weight: 200;
+
     cursor: pointer;
-    z-index: 100000;
+
+    z-index: 1000000;
 }
 
 
-/* MOBILE */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 480px) {
+
     .hero-photo {
-        height: 580px;
+        height: 570px;
     }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
 }
 
+
+
+/* =========================
+   DESKTOP
+========================= */
+
 @media (min-width: 481px) {
+
     body {
         padding: 30px 0;
     }
 
     .invitation {
-        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+        box-shadow:
+            0 10px 40px
+            rgba(40, 70, 85, 0.08);
     }
+
 }

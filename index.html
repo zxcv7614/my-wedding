@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,406 +12,465 @@
 
 <body>
 
-    <main class="invitation">
+<main class="invitation">
 
 
-        <!-- ========================================
-             HERO
-        ========================================= -->
+    <!-- =========================
+         HERO
+    ========================== -->
 
-        <section class="hero">
+    <section class="hero">
 
-            <div class="hero-content">
+        <div class="hero-content">
 
-                <p class="eyebrow">
-                    OUR WEDDING DAY
-                </p>
+            <p class="eyebrow">
+                OUR WEDDING DAY
+            </p>
 
-                <h1>
-                    문태윤
-                    <span>&</span>
-                    김민영
-                </h1>
+            <h1>
+                문태윤
+                <span>&</span>
+                김민영
+            </h1>
 
-                <p class="date">
-                    2027. 02. 13 SAT · 4:30 PM
-                </p>
+            <div class="hero-line"></div>
 
-            </div>
+            <p class="date">
+                2027. 02. 13 SAT · 4:30 PM
+            </p>
+
+        </div>
 
 
-            <div class="hero-photo">
+        <div class="hero-photo">
 
+            <img
+                src="images/main.jpg"
+                alt="문태윤 김민영 웨딩 사진"
+            >
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         INVITATION
+    ========================== -->
+
+    <section class="section invitation-section">
+
+        <p class="section-label">
+            INVITATION
+        </p>
+
+        <div class="small-line"></div>
+
+        <h2>
+            함께라서 더 즐거운 우리
+        </h2>
+
+        <p class="message">
+            같이 있으면 더 많이 웃고,<br>
+            무엇을 해도 즐거운 두 사람이
+            <br><br>
+
+            이제 평생을 함께하기로 했습니다.
+            <br><br>
+
+            웃음 가득한 저희 두 사람의<br>
+            <span class="message-highlight">
+                새로운 시작
+            </span>을<br>
+            함께 축하해 주세요.
+        </p>
+
+        <div class="heart">
+            ♡
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         GALLERY
+    ========================== -->
+
+    <section class="section gallery-section">
+
+        <p class="section-label">
+            OUR MOMENTS
+        </p>
+
+        <div class="small-line"></div>
+
+        <h2>
+            Gallery
+        </h2>
+
+
+        <div class="gallery">
+
+            <button
+                type="button"
+                class="gallery-item"
+            >
                 <img
-                    src="images/main.jpg"
-                    alt="문태윤과 김민영의 웨딩 사진"
+                    src="images/photo01.jpg"
+                    alt="웨딩 사진 1"
                 >
-
-            </div>
-
-        </section>
+            </button>
 
 
-
-        <!-- ========================================
-             INVITATION
-        ========================================= -->
-
-        <section class="section invitation-section">
-
-            <p class="section-label">INVITATION</p>
-
-            <h2>
-                함께라서 더 즐거운 우리
-            </h2>
-
-            <p class="message">
-                같이 있으면 더 많이 웃고,<br>
-                무엇을 해도 즐거운 두 사람이
-                <br><br>
-                이제 평생을 함께하기로 했습니다.
-                <br><br>
-                웃음 가득한 저희 두 사람의<br>
-                <span class="message-highlight">새로운 시작</span>을<br>
-                함께 축하해 주세요.
-            </p>
-
-            <div class="invitation-heart">♡</div>
-
-        </section>
-
-
-
-        <!-- ========================================
-             GALLERY
-        ========================================= -->
-
-        <section class="section gallery-section">
-
-            <p class="section-label">
-                OUR MOMENTS
-            </p>
-
-            <h2>
-                Gallery
-            </h2>
-
-            <div class="gallery">
-
-
-                <button
-                    type="button"
-                    class="gallery-item"
-                    onclick="openPhoto('images/photo01.jpg')"
+            <button
+                type="button"
+                class="gallery-item"
+            >
+                <img
+                    src="images/photo02.jpg"
+                    alt="웨딩 사진 2"
                 >
-
-                    <img
-                        src="images/photo01.jpg"
-                        alt="웨딩 사진 1"
-                    >
-
-                </button>
+            </button>
 
 
-
-                <button
-                    type="button"
-                    class="gallery-item"
-                    onclick="openPhoto('images/photo02.jpg')"
+            <button
+                type="button"
+                class="gallery-item"
+            >
+                <img
+                    src="images/photo03.jpg"
+                    alt="웨딩 사진 3"
                 >
-
-                    <img
-                        src="images/photo02.jpg"
-                        alt="웨딩 사진 2"
-                    >
-
-                </button>
+            </button>
 
 
-
-                <button
-                    type="button"
-                    class="gallery-item"
-                    onclick="openPhoto('images/photo03.jpg')"
+            <button
+                type="button"
+                class="gallery-item"
+            >
+                <img
+                    src="images/photo04.jpg"
+                    alt="웨딩 사진 4"
                 >
+            </button>
 
-                    <img
-                        src="images/photo03.jpg"
-                        alt="웨딩 사진 3"
-                    >
+        </div>
 
-                </button>
+        <p class="gallery-guide">
+            사진을 눌러 크게 볼 수 있습니다.
+        </p>
 
-
-
-                <button
-                    type="button"
-                    class="gallery-item"
-                    onclick="openPhoto('images/photo04.jpg')"
-                >
-
-                    <img
-                        src="images/photo04.jpg"
-                        alt="웨딩 사진 4"
-                    >
-
-                </button>
-
-
-            </div>
-
-        </section>
+    </section>
 
 
 
-        <!-- ========================================
-             WEDDING DAY
-        ========================================= -->
+    <!-- =========================
+         WEDDING DAY
+    ========================== -->
 
-        <section class="section wedding-section">
+    <section class="section wedding-section">
 
-            <p class="section-label">
-                WEDDING DAY
-            </p>
+        <p class="section-label">
+            WEDDING DAY
+        </p>
 
-            <h2>
-                Wedding Day
-            </h2>
+        <div class="small-line"></div>
 
-            <div class="wedding-details">
-
-                <p>
-                    2027년 2월 13일 토요일
-                </p>
-
-                <p>
-                    오후 4시 30분
-                </p>
-
-                <p>
-                    Chateau 1800
-                </p>
-
-                <p>
-                    1800 McCall Rd,<br>
-                    Rincon, GA 31326
-                </p>
-
-            </div>
-
-        </section>
+        <h2>
+            Wedding Day
+        </h2>
 
 
+        <div class="wedding-info">
 
-        <!-- ========================================
-             GOOGLE MAPS
-        ========================================= -->
+            <div class="info-row">
 
-        <section class="map-section">
-
-            <div class="map-placeholder">
-
-                <span>
-                    CHATEAU 1800
+                <span class="info-symbol">
+                    01
                 </span>
 
-            </div>
+                <div>
+                    <span class="info-title">
+                        DATE
+                    </span>
 
-
-            <a
-                class="map-button"
-                href="https://www.google.com/maps/place/Chateau+1800/@32.3163493,-81.3119156,17z/data=!3m1!4b1!4m6!3m5!1s0x88fbbb7141f38be9:0xd7e91812afcc6df8!8m2!3d32.3163448!4d-81.3093407!16s%2Fg%2F11h_vx4_gw?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Google Maps에서 길찾기
-            </a>
-
-        </section>
-
-
-
-        <!-- ========================================
-             CONTACT
-        ========================================= -->
-
-        <section class="section contact-section">
-
-            <p class="section-label">
-                CONTACT
-            </p>
-
-            <h2>
-                Contact
-            </h2>
-
-
-            <div class="contact-list">
-
-
-                <!-- GROOM -->
-
-                <div class="contact-row">
-
-                    <div>
-
-                        <span class="contact-role">
-                            GROOM
-                        </span>
-
-                        <strong>
-                            문태윤
-                        </strong>
-
-                    </div>
-
-
-                    <a href="tel:+13107139088">
-                        전화하기
-                    </a>
-
+                    <p>
+                        2027년 2월 13일 토요일
+                    </p>
                 </div>
 
+            </div>
 
 
-                <!-- BRIDE -->
+            <div class="info-row">
 
-                <div class="contact-row">
+                <span class="info-symbol">
+                    02
+                </span>
 
-                    <div>
+                <div>
+                    <span class="info-title">
+                        TIME
+                    </span>
 
-                        <span class="contact-role">
-                            BRIDE
-                        </span>
-
-                        <strong>
-                            김민영
-                        </strong>
-
-                    </div>
-
-
-                    <a href="tel:+17654139571">
-                        전화하기
-                    </a>
-
+                    <p>
+                        오후 4시 30분
+                    </p>
                 </div>
 
+            </div>
+
+
+            <div class="info-row">
+
+                <span class="info-symbol">
+                    03
+                </span>
+
+                <div>
+                    <span class="info-title">
+                        VENUE
+                    </span>
+
+                    <p>
+                        Chateau 1800
+                    </p>
+                </div>
 
             </div>
 
-        </section>
+
+            <div class="info-row">
+
+                <span class="info-symbol">
+                    04
+                </span>
+
+                <div>
+                    <span class="info-title">
+                        ADDRESS
+                    </span>
+
+                    <p>
+                        1800 McCall Rd,<br>
+                        Rincon, GA 31326
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
 
 
-        <!-- ========================================
-             ACCOUNT
-        ========================================= -->
+    <!-- =========================
+         LOCATION
+    ========================== -->
 
-        <section class="section account-section">
+    <section class="section location-section">
 
-            <p class="section-label">
-                ACCOUNT
+        <p class="section-label">
+            LOCATION
+        </p>
+
+        <div class="small-line"></div>
+
+        <h2>
+            Chateau 1800
+        </h2>
+
+
+        <p class="location-address">
+            1800 McCall Rd<br>
+            Rincon, GA 31326
+        </p>
+
+
+        <a
+            class="map-button"
+            href="https://www.google.com/maps/place/Chateau+1800/@32.3163493,-81.3119156,17z/data=!3m1!4b1!4m6!3m5!1s0x88fbbb7141f38be9:0xd7e91812afcc6df8!8m2!3d32.3163448!4d-81.3093407!16s%2Fg%2F11h_vx4_gw?entry=ttu"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Google Maps에서 길찾기
+        </a>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="section contact-section">
+
+        <p class="section-label">
+            CONTACT
+        </p>
+
+        <div class="small-line"></div>
+
+        <h2>
+            Contact
+        </h2>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <span class="contact-role">
+                    GROOM
+                </span>
+
+                <strong>
+                    문태윤
+                </strong>
+
+                <a href="tel:+13107139088">
+                    +1 310-713-9088
+                </a>
+
+            </div>
+
+
+
+            <div class="contact-card">
+
+                <span class="contact-role">
+                    BRIDE
+                </span>
+
+                <strong>
+                    김민영
+                </strong>
+
+                <a href="tel:+17654139571">
+                    +1 765-413-9571
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ACCOUNT
+    ========================== -->
+
+    <section class="section account-section">
+
+        <p class="section-label">
+            ACCOUNT
+        </p>
+
+        <div class="small-line"></div>
+
+        <h2>
+            마음 전하실 곳
+        </h2>
+
+
+        <div class="account-card">
+
+            <p class="account-side">
+                신랑측
             </p>
 
-            <h2>
-                마음 전하실 곳
-            </h2>
-
-
-            <!-- 신랑측 -->
-
-            <div class="account-group">
-
-                <p class="account-title">
-                    신랑측
-                </p>
-
-                <p class="account-info">
-                    신랑 · Zelle · 0000 0000 000
-                    <br>
-                    부모님 · Zelle · ym7058@gmail.com
-                </p>
-
-            </div>
-
-
-            <!-- 신부측 -->
-
-            <div class="account-group">
-
-                <p class="account-title">
-                    신부측
-                </p>
-
-                <p class="account-info">
-                    신부 · Zelle · miley0258@gmail.com
-                    <br>
-                    부모님 · Zelle · ym7058@gmail.com
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ========================================
-             CLOSING
-        ========================================= -->
-
-        <section class="closing">
-
-            <p>
-                저희의 새로운 시작을<br>
-                함께해 주셔서 감사합니다.
+            <p class="account-info">
+                신랑 · Zelle · 0000 0000 000
+                <br>
+                부모님 · Zelle · ym7058@gmail.com
             </p>
 
-            <strong>
-                문태윤 & 김민영
-            </strong>
-
-        </section>
+        </div>
 
 
-    </main>
+        <div class="account-card">
+
+            <p class="account-side">
+                신부측
+            </p>
+
+            <p class="account-info">
+                신부 · Zelle · miley0258@gmail.com
+                <br>
+                부모님 · Zelle · ym7058@gmail.com
+            </p>
+
+        </div>
+
+    </section>
 
 
 
-    <!-- ========================================
-         PHOTO MODAL
-    ========================================= -->
+    <!-- =========================
+         CLOSING
+    ========================== -->
 
-    <div
-        id="photoModal"
-        class="photo-modal"
-        onclick="closePhoto()"
+    <section class="closing">
+
+        <p class="closing-small">
+            THANK YOU
+        </p>
+
+        <div class="small-line"></div>
+
+        <p>
+            저희의 새로운 시작을<br>
+            함께해 주셔서 감사합니다.
+        </p>
+
+        <strong>
+            문태윤 & 김민영
+        </strong>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     PHOTO MODAL
+========================== -->
+
+<div
+    id="photoModal"
+    class="photo-modal"
+    aria-hidden="true"
+>
+
+    <button
+        type="button"
+        class="close-button"
+        aria-label="사진 닫기"
+    >
+        ×
+    </button>
+
+    <img
+        id="modalImage"
+        src=""
+        alt="확대된 웨딩 사진"
     >
 
-        <button
-            type="button"
-            class="close-button"
-            onclick="event.stopPropagation(); closePhoto()"
-            aria-label="사진 닫기"
-        >
-            ×
-        </button>
+</div>
 
 
-        <img
-            id="modalImage"
-            src=""
-            alt="확대된 웨딩 사진"
-            onclick="event.stopPropagation()"
-        >
-
-    </div>
-
-
-
-    <!-- JAVASCRIPT -->
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
+
 </html>
