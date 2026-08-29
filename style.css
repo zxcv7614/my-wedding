@@ -1,77 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+
 * {
     box-sizing: border-box;
 }
+
 
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     margin: 0;
+
     background: #eef1eb;
+
     color: #30342f;
+
+    /*
+     * 전체 청첩장 기본 글씨체
+     * Nanum Myeongjo 적용
+     */
     font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Apple SD Gothic Neo",
-        "Noto Sans KR",
-        sans-serif;
+        "Nanum Myeongjo",
+        serif;
 }
+
 
 button {
     font: inherit;
 }
 
+
 .invitation {
     width: 100%;
     max-width: 480px;
+
     margin: 0 auto;
+
     background: #ffffff;
 }
 
 
-/* HERO */
+/* ========================================
+   HERO
+======================================== */
+
 
 .hero {
     text-align: center;
+
     background: #ffffff;
 }
+
 
 .hero-photo {
     width: 100%;
     height: 620px;
+
     overflow: hidden;
+
     background: #e9eee7;
 }
+
 
 .hero-photo img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+
     display: block;
+
+    object-fit: cover;
 }
+
 
 .hero-content {
     padding: 55px 25px 75px;
 }
 
-.eyebrow,
-.section-label {
+
+/*
+ * OUR WEDDING DAY
+ *
+ * 기존 10px → 13px
+ */
+.eyebrow {
     margin: 0;
 
-    font-size: 10px;
+    font-size: 13px;
+
     letter-spacing: 3px;
+
     color: #8b9588;
+
+    line-height: 1.6;
 }
+
 
 .hero h1 {
     margin: 22px 0;
 
-    font-family: Georgia, "Times New Roman", serif;
-    font-weight: 400;
+    font-family:
+        "Nanum Myeongjo",
+        serif;
+
     font-size: 34px;
-    line-height: 1.35;
+
+    font-weight: 400;
+
+    line-height: 1.45;
 }
+
 
 .hero h1 span {
     display: block;
@@ -79,19 +119,28 @@ button {
     margin: 4px 0;
 
     font-size: 18px;
+
     color: #a4ada0;
 }
+
 
 .date {
     margin: 0;
 
     font-size: 12px;
+
     letter-spacing: 1px;
+
     color: #777d76;
+
+    line-height: 1.7;
 }
 
 
-/* COMMON SECTION */
+/* ========================================
+   COMMON SECTION
+======================================== */
+
 
 .section {
     padding: 90px 30px;
@@ -99,41 +148,76 @@ button {
     text-align: center;
 }
 
+
+.section-label {
+    margin: 0;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #8b9588;
+
+    line-height: 1.6;
+}
+
+
 .section h2 {
     margin: 20px 0 35px;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:
+        "Nanum Myeongjo",
+        serif;
+
     font-size: 28px;
-    font-weight: 400;
+
+    font-weight: 700;
+
     line-height: 1.5;
 }
 
 
-/* INVITATION */
+/* ========================================
+   INVITATION
+======================================== */
+
 
 .invitation-section {
     background: #f5f7f3;
 }
 
+
 .message {
     margin: 0;
 
     font-size: 14px;
+
     line-height: 2.15;
+
     color: #666c65;
 }
 
 
-/* GALLERY */
+/* ========================================
+   GALLERY
+======================================== */
+
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
     gap: 7px;
 }
 
+
 .gallery-item {
+    width: 100%;
+
     padding: 0;
+
     border: 0;
 
     aspect-ratio: 1 / 1;
@@ -143,7 +227,10 @@ button {
     background: #edf1eb;
 
     cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
 }
+
 
 .gallery-item img {
     width: 100%;
@@ -153,29 +240,44 @@ button {
 
     object-fit: cover;
 
-    transition: transform 0.3s ease;
+    transition:
+        transform 0.3s ease;
 }
+
 
 .gallery-item:hover img {
     transform: scale(1.03);
 }
 
 
-/* WEDDING */
+/* ========================================
+   WEDDING DAY
+======================================== */
+
 
 .wedding-section {
     background: #f5f7f3;
 }
 
+
 .wedding-details {
     font-size: 14px;
+
     line-height: 2;
 
     color: #60665f;
 }
 
 
-/* MAP */
+.wedding-details p {
+    margin: 8px 0;
+}
+
+
+/* ========================================
+   GOOGLE MAPS
+======================================== */
+
 
 .map-section {
     padding: 0 30px 90px;
@@ -183,10 +285,12 @@ button {
     background: #f5f7f3;
 }
 
+
 .map-placeholder {
     height: 260px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -195,13 +299,16 @@ button {
     color: #929b8f;
 
     font-size: 10px;
+
     letter-spacing: 3px;
 }
+
 
 .map-button {
     display: block;
 
     margin-top: 10px;
+
     padding: 16px;
 
     background: #ffffff;
@@ -210,28 +317,36 @@ button {
 
     text-decoration: none;
 
+    text-align: center;
+
     font-size: 12px;
 
     border: 1px solid #e3e6e1;
 }
 
 
-/* CONTACT */
+/* ========================================
+   CONTACT
+======================================== */
+
 
 .contact-list {
     border-top: 1px solid #e8ebe6;
 }
 
+
 .contact-row {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     padding: 20px 0;
 
     border-bottom: 1px solid #e8ebe6;
 }
+
 
 .contact-row > div {
     display: flex;
@@ -243,16 +358,26 @@ button {
     gap: 5px;
 }
 
+
 .contact-role {
+    font-family:
+        Arial,
+        sans-serif;
+
     font-size: 9px;
+
     letter-spacing: 2px;
+
     color: #9aa398;
 }
 
+
 .contact-row strong {
     font-size: 14px;
+
     font-weight: 400;
 }
+
 
 .contact-row a {
     padding: 9px 14px;
@@ -267,20 +392,26 @@ button {
 }
 
 
-/* ACCOUNT */
+/* ========================================
+   ACCOUNT
+======================================== */
+
 
 .account-section {
     background: #f5f7f3;
 }
 
+
 .account-info {
     margin-bottom: 25px;
 
     font-size: 13px;
+
     line-height: 2;
 
     color: #666c65;
 }
+
 
 .copy-button {
     padding: 13px 22px;
@@ -297,7 +428,10 @@ button {
 }
 
 
-/* CLOSING */
+/* ========================================
+   CLOSING
+======================================== */
+
 
 .closing {
     padding: 100px 30px;
@@ -311,17 +445,24 @@ button {
     line-height: 2;
 }
 
+
 .closing strong {
     display: block;
 
     margin-top: 25px;
 
-    font-family: Georgia, "Times New Roman", serif;
-    font-weight: 400;
+    font-family:
+        "Nanum Myeongjo",
+        serif;
+
+    font-weight: 700;
 }
 
 
-/* PHOTO MODAL */
+/* ========================================
+   PHOTO MODAL
+======================================== */
+
 
 .photo-modal {
     position: fixed;
@@ -333,43 +474,71 @@ button {
     display: none;
 
     align-items: center;
+
     justify-content: center;
 
     padding: 20px;
 
-    background: rgba(30, 34, 30, 0.92);
+    background:
+        rgba(30, 34, 30, 0.92);
 }
+
 
 .photo-modal.active {
     display: flex;
 }
 
+
 .photo-modal img {
     max-width: 100%;
+
     max-height: 90vh;
+
+    display: block;
 
     object-fit: contain;
 }
+
 
 .close-button {
     position: absolute;
 
     top: 15px;
+
     right: 20px;
+
+    width: 45px;
+
+    height: 45px;
+
+    padding: 0;
 
     border: 0;
 
     background: transparent;
 
-    color: white;
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        sans-serif;
 
     font-size: 35px;
 
+    font-weight: 300;
+
+    line-height: 45px;
+
     cursor: pointer;
+
+    z-index: 10000;
 }
 
 
-/* MOBILE */
+/* ========================================
+   MOBILE
+======================================== */
+
 
 @media (max-width: 480px) {
 
@@ -379,14 +548,17 @@ button {
 
 }
 
+
 @media (min-width: 481px) {
 
     body {
         padding: 30px 0;
     }
 
+
     .invitation {
-        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+        box-shadow:
+            0 5px 30px rgba(0, 0, 0, 0.05);
     }
 
 }
