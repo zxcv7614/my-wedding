@@ -116,9 +116,30 @@ button {
 
 .message {
     margin: 0;
+
+    font-family: "Nanum Myeongjo", serif;
     font-size: 16px;
-    line-height: 2.1;
+    font-weight: 400;
+
+    line-height: 2.15;
+
     color: #5d645c;
+
+    letter-spacing: -0.2px;
+}
+
+.message-highlight {
+    color: #485348;
+    font-weight: 700;
+}
+
+.invitation-heart {
+    margin-top: 38px;
+
+    font-size: 17px;
+    color: #9aa696;
+
+    line-height: 1;
 }
 
 
