@@ -1,3 +1,784 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Nanum+Myeongjo:wght@400;700&display=swap');
+
+
+/* =========================
+   BASE
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    background: #f1f1f1;
+
+    color: #383838;
+
+    font-family:
+        "Nanum Myeongjo",
+        serif;
+}
+
+
+button {
+    font: inherit;
+}
+
+
+.invitation {
+    width: 100%;
+    max-width: 480px;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    overflow: hidden;
+}
+
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+
+/*
+ * 상단 흰 공간
+ */
+
+/* 상단 흰 공간 */
+.hero-top {
+    position: relative;
+    height: 300px;
+    background: #ffffff;
+    overflow: visible;
+}
+
+
+/* SAVE THE DATE 세로 박스 */
+.save-date-card {
+    position: absolute;
+
+    left: 50%;
+    bottom: -70px;
+
+    transform: translateX(-50%);
+
+    z-index: 20;
+
+    width: 140px;
+    min-height: 250px;
+
+    padding: 30px 18px 26px;
+
+    border: 1.5px solid #c8d8da;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    text-align: center;
+}
+
+
+.save-title {
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 22px;
+    font-weight: 400;
+
+    line-height: 1.05;
+    letter-spacing: 6px;
+
+    color: #333333;
+}
+
+
+.save-title span {
+    display: block;
+
+    margin: 8px 0;
+
+    font-size: 17px;
+    letter-spacing: 3px;
+}
+
+
+.save-line {
+    width: 1px;
+    height: 46px;
+
+    margin: 22px auto;
+
+    background: #b9cacc;
+}
+
+
+.save-names {
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+    color: #3f3f3f;
+}
+
+
+/* 메인 사진 */
+.hero-photo {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 360px;
+
+    overflow: hidden;
+
+    background: #eeeeee;
+}
+
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/*
+ * 사진 밑 날짜 / 시간
+ */
+
+.hero-date {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    min-height: 95px;
+
+    padding: 22px 20px;
+
+    background: #ffffff;
+}
+
+
+.hero-date p {
+    margin: 0;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1.3px;
+
+    color: #707070;
+}
+
+
+.hero-date span {
+    width: 1px;
+    height: 12px;
+
+    background: #c7d3d5;
+}
+
+
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+.section {
+    padding: 95px 32px;
+
+    text-align: center;
+}
+
+
+.section-label {
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    color: #7d989d;
+}
+
+
+.section-line {
+    width: 25px;
+    height: 1px;
+
+    margin: 15px auto 0;
+
+    background: #bdcccf;
+}
+
+
+.section h2 {
+    margin: 28px 0 38px;
+
+    font-size: 26px;
+    font-weight: 400;
+
+    line-height: 1.6;
+
+    color: #424242;
+}
+
+
+
+/* =========================
+   INVITATION
+========================= */
+
+.invitation-section {
+    background: #fafafa;
+}
+
+
+.message {
+    margin: 0;
+
+    font-size: 15px;
+
+    line-height: 2.25;
+
+    color: #606060;
+}
+
+
+.heart {
+    margin-top: 38px;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 21px;
+
+    color: #afc8cc;
+}
+
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    background: #ffffff;
+}
+
+
+.gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 6px;
+}
+
+
+.gallery-item {
+    width: 100%;
+
+    padding: 0;
+
+    border: 0;
+
+    background: #eeeeee;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    pointer-events: none;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.gallery-item:hover img {
+    transform: scale(1.03);
+}
+
+
+
+/* =========================
+   WEDDING DAY
+========================= */
+
+.wedding-section {
+    background: #fafafa;
+}
+
+
+.wedding-details {
+    color: #626262;
+
+    font-size: 15px;
+
+    line-height: 2;
+}
+
+
+.wedding-details p {
+    margin: 7px 0;
+}
+
+
+.detail-divider {
+    width: 1px;
+    height: 32px;
+
+    margin: 25px auto;
+
+    background: #bdcccf;
+}
+
+
+.venue-name {
+    font-size: 17px;
+
+    color: #454545;
+}
+
+
+.venue-address {
+    font-size: 14px;
+
+    color: #777777;
+}
+
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.location-section {
+    background: #ffffff;
+}
+
+
+.location-address {
+    margin: -12px 0 30px;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    color: #777777;
+}
+
+
+.map-button {
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    border: 1px solid #b9cacd;
+
+    background: transparent;
+
+    color: #637c80;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.map-button:hover {
+    background: #edf3f4;
+
+    color: #44595d;
+}
+
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    background: #fafafa;
+}
+
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1px 1fr;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.contact-divider {
+    width: 1px;
+    height: 80px;
+
+    background: #d8e0e1;
+}
+
+
+.contact-card {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.contact-role {
+    margin-bottom: 10px;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #7d989d;
+}
+
+
+.contact-card strong {
+    margin-bottom: 15px;
+
+    font-size: 17px;
+
+    font-weight: 400;
+}
+
+
+.contact-card a {
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    color: #707b7d;
+
+    text-decoration: none;
+}
+
+
+
+/* =========================
+   ACCOUNT
+========================= */
+
+.account-section {
+    background: #ffffff;
+}
+
+
+.account-box {
+    margin-bottom: 12px;
+
+    padding: 22px 20px;
+
+    border: 1px solid #e4e7e7;
+
+    background: #fafafa;
+
+    text-align: left;
+}
+
+
+.account-box:last-child {
+    margin-bottom: 0;
+}
+
+
+.account-title {
+    margin: 0 0 11px;
+
+    font-size: 15px;
+
+    color: #5c7377;
+}
+
+
+.account-info {
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 2;
+
+    color: #666666;
+
+    word-break: break-word;
+}
+
+
+
+/* =========================
+   CLOSING
+========================= */
+
+.closing {
+    padding: 100px 30px;
+
+    background: #fafafa;
+
+    text-align: center;
+}
+
+
+.closing-label {
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    color: #829da2;
+}
+
+
+.closing-message {
+    margin: 30px 0 0;
+
+    font-size: 15px;
+
+    line-height: 2.1;
+
+    color: #646464;
+}
+
+
+.closing-heart {
+    margin-top: 25px;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 20px;
+
+    color: #aac4c8;
+}
+
+
+.closing strong {
+    display: block;
+
+    margin-top: 22px;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    color: #484848;
+}
+
+
+
+/* =========================
+   PHOTO MODAL
+========================= */
+
+.photo-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 999999;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(15, 15, 15, 0.94);
+}
+
+
+.photo-modal.active {
+    display: flex;
+}
+
+
+.photo-modal img {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 95vw;
+    max-height: 88vh;
+
+    object-fit: contain;
+}
+
+
+.close-button {
+    position: absolute;
+
+    top: 14px;
+    right: 17px;
+
+    z-index: 1000000;
+
+    width: 48px;
+    height: 48px;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 38px;
+    font-weight: 200;
+
+    cursor: pointer;
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .hero-top {
+        height: 285px;
+    }
+
+
+    .hero-photo {
+        height: 350px;
+    }
+
+
+    .save-date-card {
+        width: 130px;
+
+        padding:
+            27px 17px 25px;
+    }
+
+
+    .save-title {
+        font-size: 20px;
+    }
+
+}
+
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 481px) {
+
+    body {
+        padding: 30px 0;
+    }
+
+
+    .invitation {
+        box-shadow:
+            0 8px 35px
+            rgba(0, 0, 0, 0.06);
+    }
+
+}
 /* ========================================
    A NOTE FROM US
 ======================================== */
@@ -33,15 +814,7 @@
     width: 88%;
     max-width: 360px;
 
-    margin: 42px auto;
-
-    border: 1px solid #d8e0e1;
-
-    background: #ffffff;
-
-    padding: 24px 16px 20px;
-
-    box-sizing: border-box;
+    margin: 45px auto 42px;
 }
 
 
@@ -49,39 +822,31 @@
 
 .calendar-weekdays {
     display: grid;
-
     grid-template-columns: repeat(7, 1fr);
 
-    padding-bottom: 12px;
+    margin-bottom: 16px;
 
-    margin-bottom: 8px;
-
-    border-bottom: 1px solid #dfe5e6;
-
-    text-align: center;
-}
-
-
-.calendar-weekdays span {
     font-family:
         "Cormorant Garamond",
         Georgia,
         serif;
 
     font-size: 10px;
+    letter-spacing: 1px;
 
-    letter-spacing: 0.8px;
+    color: #9a9a9a;
 
-    color: #999;
+    text-align: center;
 }
 
 
-/* 날짜 영역 */
+/* 날짜 */
 
 .calendar-days {
     display: grid;
-
     grid-template-columns: repeat(7, 1fr);
+
+    row-gap: 16px;
 
     text-align: center;
 }
@@ -90,11 +855,14 @@
 .calendar-days span {
     position: relative;
 
-    height: 44px;
-
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    margin: auto;
 
     font-family:
         "Cormorant Garamond",
@@ -104,49 +872,18 @@
     font-size: 14px;
 
     color: #555;
-
-    border-bottom: 1px solid #f0f2f2;
-
-    box-sizing: border-box;
 }
 
 
-/* 마지막 주는 아래 선 제거 */
-
-.calendar-days span:nth-last-child(-n+7) {
-    border-bottom: none;
-}
-
-
-/* 빈칸 */
-
-.calendar-days .empty {
-    color: transparent;
-}
-
-
-/* 결혼식 날짜 */
+/* 결혼식 날짜 13일 */
 
 .calendar-days .wedding-date {
-    color: #4f6e73;
+    border: 1px solid #b9cacc;
+    border-radius: 50%;
+
+    color: #536f74;
 
     font-weight: 500;
-}
-
-
-/* 13일 동그라미 */
-
-.calendar-days .wedding-date::before {
-    content: "";
-
-    position: absolute;
-
-    width: 30px;
-    height: 30px;
-
-    border: 1px solid #9fb6ba;
-
-    border-radius: 50%;
 }
 
 
@@ -157,18 +894,22 @@
 
     position: absolute;
 
-    bottom: 3px;
+    bottom: -6px;
+    left: 50%;
+
+    transform: translateX(-50%);
 
     width: 3px;
     height: 3px;
 
     border-radius: 50%;
 
-    background: #9fb6ba;
+    background: #9eb5b9;
 }
 
 
-/* 달력 아래 정보 */
+
+/* 달력 아래 Event */
 
 .calendar-event {
     margin-top: 35px;
@@ -178,7 +919,7 @@
 
 
 .calendar-event-date {
-    margin: 0 0 10px;
+    margin: 0 0 12px;
 
     font-family:
         "Cormorant Garamond",
@@ -187,9 +928,9 @@
 
     font-size: 12px;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 1.8px;
 
-    color: #8b8b8b;
+    color: #858585;
 }
 
 
@@ -201,7 +942,7 @@
         Georgia,
         serif;
 
-    font-size: 24px;
+    font-size: 25px;
 
     letter-spacing: 2px;
 
@@ -210,12 +951,12 @@
 
 
 .calendar-event .detail-divider {
-    width: 24px;
+    width: 25px;
     height: 1px;
 
-    margin: 22px auto;
+    margin: 24px auto;
 
-    background: #c8d4d6;
+    background: #c8d2d4;
 }
 
 
@@ -224,7 +965,7 @@
 
     font-size: 15px;
 
-    color: #555;
-
     letter-spacing: 1px;
+
+    color: #555;
 }
