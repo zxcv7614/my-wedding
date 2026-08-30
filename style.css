@@ -1,4 +1,31 @@
 /* ========================================
+   A NOTE FROM US
+======================================== */
+
+.note-section {
+    background: #fafafa;
+}
+
+.note-message {
+    max-width: 410px;
+    margin: 0 auto;
+
+    padding: 0 22px;
+
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 2.15;
+
+    color: #686868;
+
+    word-break: keep-all;
+}
+
+
+
+/* ========================================
    WEDDING CALENDAR
 ======================================== */
 
