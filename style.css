@@ -64,65 +64,6 @@ button {
  */
 
 /* 상단 흰 공간 */
-.hero-top {
-    position: relative;
-    height: 300px;
-    background: #ffffff;
-    overflow: visible;
-}
-.wedding-day {
-    margin-bottom: 28px;
-
-    font-family: "Playfair Display", serif;
-
-    font-size: 13px;
-    font-weight: 400;
-
-    letter-spacing: 4px;
-
-    color: #8b8b8b;
-}
-
-/* SAVE THE DATE 세로 박스 */
-.save-date-card {
-    position: absolute;
-
-    left: 50%;
-    bottom: -70px;
-
-    transform: translateX(-50%);
-
-    z-index: 20;
-
-    width: 140px;
-    min-height: 250px;
-
-    padding: 30px 18px 26px;
-
-    border: 1.5px solid #c8d8da;
-
-    background: rgba(255, 255, 255, 0.92);
-
-    text-align: center;
-}
-
-
-.save-title {
-    margin: 0;
-
-    font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-    font-size: 22px;
-    font-weight: 400;
-
-    line-height: 1.05;
-    letter-spacing: 6px;
-
-    color: #5c7377;
-}
 
 
 .save-title span {
@@ -135,47 +76,140 @@ button {
 }
 
 
-.save-line {
-    width: 1px;
-    height: 46px;
+/* ========================================
+   HERO
+======================================== */
 
-    margin: 22px auto;
+.hero {
+    width: 100%;
+    background: #ffffff;
+    text-align: center;
 
-    background: #b9cacc;
+    overflow: hidden;
 }
 
 
-.save-names {
-    margin: 0;
+/* ========================================
+   사진 위 영역
+======================================== */
+
+.hero-header {
+    width: 100%;
+
+    padding: 82px 20px 45px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   결 혼 합 니 다
+======================================== */
+
+.wedding-title-box {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+
+    border-top: 1px solid #b9d8e3;
+    border-bottom: 1px solid #b9d8e3;
+}
+
+
+/* 각각의 글자 칸 */
+
+.wedding-title-box span {
+    width: 29px;
+    height: 29px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    border-left: 1px solid #d3e5ea;
 
     font-family:
-        "Playfair Display",
-        Georgia,
+        "Nanum Myeongjo",
         serif;
 
     font-size: 14px;
 
-    line-height: 1.7;
+    font-weight: 400;
 
-    letter-spacing: 1px;
-
-    white-space: nowrap;
-
-    color: #3f3f3f;
+    color: #4e5558;
 }
 
 
-/* 메인 사진 */
+/* 마지막 글자 오른쪽 선 */
+
+.wedding-title-box span:last-child {
+    border-right: 1px solid #d3e5ea;
+}
+
+
+/* ========================================
+   이름
+======================================== */
+
+.hero-names {
+    margin: 25px 0 0;
+
+    font-family:
+        "Cormorant Garamond",
+        "Times New Roman",
+        serif;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    letter-spacing: 0.5px;
+
+    color: #4b4b4b;
+
+    white-space: nowrap;
+}
+
+
+/* 가운데 하트 */
+
+.hero-heart {
+    display: inline-block;
+
+    margin: 0 7px;
+
+    font-size: 10px;
+
+    color: #96c5d4;
+
+    vertical-align: 1px;
+}
+
+
+/* ========================================
+   MAIN PHOTO
+======================================== */
+
 .hero-photo {
     position: relative;
-    z-index: 1;
 
     width: 100%;
-    height: 360px;
+
+    height: 430px;
 
     overflow: hidden;
 
-    background: #eeeeee;
+    background: #f2f2f2;
 }
 
 
@@ -186,29 +220,58 @@ button {
     display: block;
 
     object-fit: cover;
+
     object-position: center;
+
+    filter: none;
 }
 
 
-/*
- * 사진 밑 날짜 / 시간
- */
+/* ========================================
+   사진 아래 DATE
+======================================== */
 
-.hero-date {
-    display: flex;
+.hero-bottom {
+    padding: 34px 20px 45px;
 
-    align-items: center;
-    justify-content: center;
-
-    gap: 13px;
-
-    min-height: 95px;
-
-    padding: 22px 20px;
+    box-sizing: border-box;
 
     background: #ffffff;
 }
 
+
+.hero-date-text {
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    letter-spacing: 1.2px;
+
+    color: #505050;
+}
+
+
+.hero-time-text {
+    margin: 7px 0 0;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 14px;
+
+    letter-spacing: 1.5px;
+
+    color: #777777;
+}
 
 .hero-date p {
     margin: 0;
