@@ -147,45 +147,6 @@ button {
 }
 
 
-
-/* =========================
-   HERO NAMES
-========================= */
-
-.hero-names {
-    margin: 25px 0 0;
-
-    font-family:
-        "Nanum Myeongjo",
-        Georgia,
-        serif;
-
-    font-size: 15px;
-
-    font-weight: 400;
-
-    letter-spacing: 0.3px;
-
-    color: #4c4c4c;
-
-    white-space: nowrap;
-}
-
-
-.hero-heart {
-    display: inline-block;
-
-    margin: 0 8px;
-
-    font-size: 9px;
-
-    color: #82b8c8;
-
-    vertical-align: 1px;
-}
-
-
-
 /* =========================
    MAIN PHOTO
 ========================= */
