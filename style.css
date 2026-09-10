@@ -119,18 +119,21 @@ button {
     color: #50575a;
 }
 
-/* =========================
-   HERO TITLE SIZE UPDATE
-========================= */
-
-/* 결 혼 합 니 다 */
+/* 결혼합니다 글씨 크게 */
 .wedding-title-box span {
-    width: 40px;
-    height: 40px;
-
-    font-size: 19px;
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+}
+.wedding-title-box span:last-child {
+    border-right: 1px solid #bedce4;
 }
 
+
+
+/* =========================
+   HERO NAMES
+========================= */
 /* 아래 영문 이름 */
 .hero-names {
     margin-top: 27px;
@@ -145,6 +148,7 @@ button {
 
     font-size: 11px;
 }
+
 
 
 /* =========================
