@@ -70,7 +70,18 @@ button {
     background: #ffffff;
     overflow: visible;
 }
+.wedding-day {
+    margin-bottom: 28px;
 
+    font-family: "Playfair Display", serif;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    letter-spacing: 4px;
+
+    color: #8b8b8b;
+}
 
 /* SAVE THE DATE 세로 박스 */
 .save-date-card {
