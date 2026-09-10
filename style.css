@@ -900,3 +900,83 @@ button {
     }
 
 }
+/* =========================
+   SKY BLUE BACKGROUND THEME
+========================= */
+
+body {
+    background: #e8f3f6;
+}
+
+.invitation,
+.hero,
+.hero-header,
+.hero-bottom,
+.note-section,
+.wedding-section,
+.closing {
+    background: #f1f8fa;
+}
+
+.invitation-section,
+.gallery-section,
+.account-section {
+    background: #f7fbfc;
+}
+
+.wedding-calendar {
+    background: rgba(255, 255, 255, 0.45);
+    border-color: #c6dde3;
+}
+
+.account-box {
+    background: rgba(255, 255, 255, 0.55);
+    border-color: #d4e5e9;
+}
+
+
+/* 하늘색 포인트 */
+
+.section-label,
+.closing-label {
+    color: #78aebb;
+}
+
+.section-line {
+    background: #a9cdd5;
+}
+
+.wedding-title-box {
+    border-top-color: #8fbfca;
+    border-bottom-color: #8fbfca;
+}
+
+.wedding-title-box span {
+    border-left-color: #afd2da;
+}
+
+.wedding-title-box span:last-child {
+    border-right-color: #afd2da;
+}
+
+.hero-heart,
+.heart,
+.closing-heart {
+    color: #82b9c6;
+}
+
+.account-title {
+    color: #689ba7;
+}
+
+.calendar-days .wedding-date {
+    color: #568b97;
+}
+
+.calendar-days .wedding-date::before {
+    border-color: #82b5c1;
+}
+
+.calendar-days .wedding-date::after {
+    background: #82b5c1;
+}
