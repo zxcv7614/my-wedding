@@ -158,8 +158,8 @@ document.addEventListener(
         );
 
 
-        /* ========================================
-           WEDDING COUNTDOWN
+                /* ========================================
+        WEDDING COUNTDOWN
         ======================================== */
 
         const weddingDate =
@@ -171,9 +171,6 @@ document.addEventListener(
 
         const today =
             new Date();
-
-
-        /* 시간 제거하고 날짜만 비교 */
 
         today.setHours(
             0,
@@ -189,11 +186,9 @@ document.addEventListener(
             0
         );
 
-
         const difference =
             weddingDate.getTime() -
             today.getTime();
-
 
         const daysLeft =
             Math.ceil(
@@ -206,30 +201,30 @@ document.addEventListener(
                 )
             );
 
-
-        const weddingDays =
+        const weddingCountdown =
             document.getElementById(
-                "weddingDays"
+                "weddingCountdown"
             );
 
-
-        if (weddingDays) {
+        if (weddingCountdown) {
 
             if (daysLeft > 0) {
 
-                weddingDays.textContent =
-                    daysLeft;
+                weddingCountdown.innerHTML =
+                    '태윤과 민영의 결혼식이 ' +
+                    '<strong>' +
+                    daysLeft +
+                    '</strong>일 남았습니다.';
 
             } else if (daysLeft === 0) {
 
-                weddingDays.textContent =
-                    "오늘";
+                weddingCountdown.innerHTML =
+                    '오늘은 태윤과 민영의 결혼식 날입니다. ♡';
 
             } else {
 
-                weddingDays.textContent =
-                    Math.abs(daysLeft);
-
+                weddingCountdown.innerHTML =
+                    '태윤과 민영의 결혼식이 있었습니다. ♡';
             }
         }
 

@@ -1014,3 +1014,15 @@ body {
 
     word-break: keep-all;
 }
+.account-note {
+    max-width: 390px;
+
+    margin: -8px auto 38px;
+
+    font-size: 13px;
+    line-height: 2;
+
+    color: #78898d;
+
+    word-break: keep-all;
+}
