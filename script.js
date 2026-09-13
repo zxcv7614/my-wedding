@@ -177,6 +177,30 @@ document.addEventListener(
 
             }
         );
+        
 
     }
+    
 );
+/* =========================
+   WEDDING COUNTDOWN
+========================= */
+
+const weddingDate = new Date("2027-02-13T00:00:00");
+
+const today = new Date();
+
+today.setHours(0, 0, 0, 0);
+
+const difference = weddingDate - today;
+
+const daysLeft = Math.ceil(
+    difference / (1000 * 60 * 60 * 24)
+);
+
+const weddingDays =
+    document.getElementById("weddingDays");
+
+if (weddingDays) {
+    weddingDays.textContent = daysLeft;
+}
