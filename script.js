@@ -2,6 +2,10 @@ document.addEventListener(
     "DOMContentLoaded",
     function () {
 
+        /* ========================================
+           GALLERY PHOTO MODAL
+        ======================================== */
+
         const galleryItems =
             document.querySelectorAll(
                 ".gallery-item"
@@ -39,7 +43,6 @@ document.addEventListener(
                                 "img"
                             );
 
-
                         if (
                             !photo ||
                             !modal ||
@@ -48,31 +51,24 @@ document.addEventListener(
                             return;
                         }
 
-
                         modalImage.src =
                             photo.src;
-
 
                         modal.classList.add(
                             "active"
                         );
-
 
                         modal.setAttribute(
                             "aria-hidden",
                             "false"
                         );
 
-
                         document.body.style.overflow =
                             "hidden";
-
                     }
                 );
-
             }
         );
-
 
 
         /*
@@ -85,28 +81,22 @@ document.addEventListener(
                 return;
             }
 
-
             modal.classList.remove(
                 "active"
             );
-
 
             modal.setAttribute(
                 "aria-hidden",
                 "true"
             );
 
-
             if (modalImage) {
                 modalImage.src = "";
             }
 
-
             document.body.style.overflow =
                 "";
-
         }
-
 
 
         /*
@@ -122,12 +112,9 @@ document.addEventListener(
                     event.stopPropagation();
 
                     closePhoto();
-
                 }
             );
-
         }
-
 
 
         /*
@@ -143,16 +130,11 @@ document.addEventListener(
                     if (
                         event.target === modal
                     ) {
-
                         closePhoto();
-
                     }
-
                 }
             );
-
         }
-
 
 
         /*
@@ -170,37 +152,86 @@ document.addEventListener(
                         "active"
                     )
                 ) {
-
                     closePhoto();
-
                 }
-
             }
         );
-        
+
+
+        /* ========================================
+           WEDDING COUNTDOWN
+        ======================================== */
+
+        const weddingDate =
+            new Date(
+                2027,
+                1,
+                13
+            );
+
+        const today =
+            new Date();
+
+
+        /* 시간 제거하고 날짜만 비교 */
+
+        today.setHours(
+            0,
+            0,
+            0,
+            0
+        );
+
+        weddingDate.setHours(
+            0,
+            0,
+            0,
+            0
+        );
+
+
+        const difference =
+            weddingDate.getTime() -
+            today.getTime();
+
+
+        const daysLeft =
+            Math.ceil(
+                difference /
+                (
+                    1000 *
+                    60 *
+                    60 *
+                    24
+                )
+            );
+
+
+        const weddingDays =
+            document.getElementById(
+                "weddingDays"
+            );
+
+
+        if (weddingDays) {
+
+            if (daysLeft > 0) {
+
+                weddingDays.textContent =
+                    daysLeft;
+
+            } else if (daysLeft === 0) {
+
+                weddingDays.textContent =
+                    "오늘";
+
+            } else {
+
+                weddingDays.textContent =
+                    Math.abs(daysLeft);
+
+            }
+        }
 
     }
-    
 );
-/* =========================
-   WEDDING COUNTDOWN
-========================= */
-
-const weddingDate = new Date("2027-02-13T00:00:00");
-
-const today = new Date();
-
-today.setHours(0, 0, 0, 0);
-
-const difference = weddingDate - today;
-
-const daysLeft = Math.ceil(
-    difference / (1000 * 60 * 60 * 24)
-);
-
-const weddingDays =
-    document.getElementById("weddingDays");
-
-if (weddingDays) {
-    weddingDays.textContent = daysLeft;
-}
