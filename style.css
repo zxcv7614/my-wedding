@@ -1004,3 +1004,13 @@ body {
 
     color: #6d9eaa;
 }
+.account-note {
+    margin: -10px auto 35px;
+
+    font-size: 13px;
+    line-height: 2;
+
+    color: #78898d;
+
+    word-break: keep-all;
+}
